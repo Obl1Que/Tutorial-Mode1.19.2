@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.obl1que.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(TutoriamMod.MOD_ID)
@@ -16,6 +17,8 @@ public class TutoriamMod {
     private static final Logger LOGGER = LogUtils.getLogger();
     public TutoriamMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
