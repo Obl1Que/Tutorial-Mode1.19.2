@@ -1,5 +1,6 @@
 package net.obl1que.tutorialmod.item;
 
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,6 +16,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> RAW_ZIRCOM = ITEMS.register("raw_zircon",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> GREEN_APPLE = ITEMS.register("green_apple",
+            () -> new Item(new Item.Properties().food(Foods.GREEN_APPLE).tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(16)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
